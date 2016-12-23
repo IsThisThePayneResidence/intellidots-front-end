@@ -1,0 +1,117 @@
+.f-table {
+  text-table-td()
+  font-size: 13px
+  .f-row {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0 //rgba(0, 0, 0, .12);//.22
+    min-height: 32px;
+    align-items: stretch;
+    transition:
+      background 1ms cubic-bezier(0.23, 1, 0.32, 1) 0ms,
+      all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+    & > div {
+      flex: 1 0;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      & > div {
+        padding: 0 12px;
+        flex: 1 0;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    &.f-head {
+      //background: #f9f9f9; //A9BDCA
+      color: #757575;
+      font-family: 'Roboto Regular';
+      line-height: normal;
+      font-size: 14px;
+      & > div {
+        text-table-th();
+      }
+    }
+    &:not(.f-head)/*:not(.active-row)*/ {
+      &:hover {
+        background-color: rgba(212, 212, 212, 0.4);
+        color: #000;
+      }
+    }
+  }
+  &.clickable .f-row:not(.f-head) {
+    cursor: pointer;
+  }
+  .f-row.active-row {
+    background-color: rgba(230, 230, 230, .4) // #CBE6F1 // #eefacd; #
+    color: #393c31;
+  }
+  &.bordered {
+    border: 1px solid #e0e0e0;
+    .f-row:last-child  {
+      border: 0px solid #e0e0e0;
+      transition: none;
+    }
+  }
+  &.not-actual {
+    color: #aaa;
+    .f-row.f-head > div{
+      color: #aaa;
+    }
+  }
+
+  .f-row > div.f-action {
+    overflow: visible;
+
+    div {
+      display: flex;
+      & > * {
+        flex:1;
+        .btn-icon {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          i {
+            color: rgba(0, 0, 0, .54)
+          }
+        }
+      }
+    }
+  }
+  //sort
+
+
+  .sort {
+    cursor: pointer
+    position: relative
+    transition: _transition
+    & > div {
+      display: flex
+      align-items: center
+      flex-direction: row
+    }
+    &:hover {
+      background-color rgba(212,212,212,0.4)
+    }
+  }
+  .sorted {
+    color: initial
+  }
+
+}
+
+
+.flex-table-pagination
+  display: flex
+  .total-pager-into
+    flex: 1
+    font-family: 'Roboto Regular'
+    color: #757575
+
+
+  //.page-size-selector
+  .pagination
+    display: flex
+    text-align: right

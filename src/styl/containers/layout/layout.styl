@@ -1,0 +1,14 @@
+.provider
+  overflow hidden
+  height 100vh
+.pages-wrapper
+  padding: _header_height 0 0 0
+  transition padding _transition
+  &.show-menu
+    padding: _header_height 0 0 _menu_width
+
+  .pages-content
+    padding: _pages_padding_height _pages_padding_width
+    height: "calc(100vh - %s )" % (_header_height +  2 * _pages_padding_height)
+    overflow: auto
+

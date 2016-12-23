@@ -1,0 +1,82 @@
+.f-table
+  .f-row:not(.f-head) > div.status-cell
+    position: relative
+    text-align: center
+    color: #e74c3c
+    &:before {
+      content: ' '
+      position: absolute
+      height: 100%
+      width: 100%
+      background: #ffe7e7
+      z-index: -1
+      top: 0
+    }
+    &.active {
+      color: #2ecc71
+    }
+    &.active:before {
+      background: #ddfade
+    }
+  .f-row > div
+    &.status-cell
+      flex: .3 0 60px
+    &.check-column
+      max-width: 45px
+    &.instrument
+      flex: .3 0 60px
+    &.timeStamp
+      flex: .3 0 60px
+    &.details-cell
+      flex: .3 0 60px
+      text-align center
+      overflow: visible
+      z-ndex: 5
+    &.type
+      flex: .3 0 60px
+    // выравнивание отступы
+    &.id
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.accountNumber
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.volume
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.timeRange
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.Cs
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.Cbuy
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.Csell
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.Vbuy
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.Vsell
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.Cnet
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.Vnet
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.BV_n
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+    &.BV_n_1
+      text-align right
+      &.sort > div {flex-direction: row-reverse}
+
+
+
+
+
+

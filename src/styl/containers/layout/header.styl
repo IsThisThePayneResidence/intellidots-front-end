@@ -1,0 +1,33 @@
+.header
+  display: flex
+  position: absolute
+  z-index: 1500
+  height: _header_height
+  width: 100vw
+  background: #52a7e0
+
+  .logo-part
+    flex: 0 0
+    display: flex
+    background: rgba(255, 255, 255, .1)
+    transition: flex _transition
+    .logo-text
+      flex: 1
+      display: flex
+      align-items: center
+      color: #fff
+      font-size: 20px
+      white-space: nowrap
+      padding: 0 16px
+      span
+        cursor pointer
+
+
+  .tool-part
+    flex: 1
+    display: flex
+    align-items: center
+
+  &.show-menu
+    .logo-part
+      flex: 0 0 _menu_width

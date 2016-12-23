@@ -1,0 +1,68 @@
+.login-form-wrapper
+  background: linear-gradient(to right, rgba(72, 66, 168, .5), rgba(72, 66, 168, 1) 100%)
+  height: 100vh
+  display: flex
+  &:after, &:before
+    content: ' '
+    height: 100vh
+    width: 100vw
+    left: 0
+    position: absolute
+    top: 0
+  &:before
+    background: radial-gradient(ellipse at 50% 0%, rgba(65, 239, 252, 1) 0%, rgba(65, 239, 252, .15) 50%, rgba(0, 0, 0, 0) 100%)
+  &:after
+    background: radial-gradient(ellipse at 50% 100%, rgba(234, 16, 110, 1) 0%, rgba(234, 16, 110, .15) 50%, rgba(0, 0, 0, .0) 100%)
+
+
+.login-form
+  margin: auto
+  padding: 24px 35px
+  width: 290px
+  height: 300px
+  background: #fff
+  z-index: 5
+  box-shadow: rgba(0, 0, 0, 0.156863) 0px 3px 10px, rgba(0, 0, 0, 0.227451) 0px 3px 10px
+  border-radius: 2px
+
+  h2
+    color: #444
+    margin: 15px 0
+
+  .submit {
+    transition: all .3s;
+    &.loading {
+      opacity: 1;
+      color: transparent;
+      i.spin {
+        opacity: 1;
+      }
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+
+    @keyframes mc-button-loading {
+      100% {
+        left:100%
+      }
+    }
+    i.spin {
+      display: block;
+      position: absolute;
+      background: rgba(0, 0, 0, .2);
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      left: -100%;
+      animation: mc-button-loading 1.5s infinite ease-in-out;
+      transition: opacity .3s;
+      opacity: 0;
+    }
+  }
+
+
+
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
+  box-shadow:inset 0 0 0 1000px #fff

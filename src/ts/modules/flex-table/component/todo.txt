@@ -1,0 +1,17 @@
+filter-elements
+  - autocompete-cell
+  - condition-cell  // >,<, =
+  - datatime-cell
+  - datatime-range-cell
+  - range-cell
+  - search-cell
+
+part
+  - total row
+  - pagination
+
+other
+  - sorting cell view
+  - active row
+  - clean sort
+  - clean filter

@@ -1,0 +1,12 @@
+# Logs
+npm-debug.log
+
+# Dependency dirs
+node_modules
+typings/globals
+
+# Distribution
+dist
+
+# IDE
+.idea
